@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #d0d7e2;
+    color: #333;
+  }
+  
+  /* Centering the form on the page */
+  .page-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  /* Form Container */
+  .my-form {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 28px;
+    background-color: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Input Fields */
+  .my-form input {
+    padding: 12px 16px;
+    font-size: 16px;
+    background-color: #fbfbfb;
+    border: 1px solid #d0d7e2;
+    border-radius: 10px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .my-form input:focus {
+    border-color: #6c63ff;
+    box-shadow: 0 0 4px rgba(108, 99, 255, 0.3);
+  }
+  
+  /* React Select */
+  .react-select {
+    font-size: 16px;
+  }
+  .rs__control {
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid #d0d7e2;
+    background-color: #fbfbfb;
+    box-shadow: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .rs__control:hover {
+    border-color: #6c63ff;
+  }
+  .rs__control--is-focused {
+    border-color: #6c63ff;
+    box-shadow: 0 0 4px rgba(108, 99, 255, 0.3);
+  }
+  
+  /* Submit Button */
+  .my-form button {
+    padding: 12px;
+    background-color: #3f51b5;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .my-form button:hover {
+    background-color: #2c387e;
+  }
+  
+  .my-form button:active {
+    transform: scale(0.97);
+  }
+  
+  .card {
+    background-color: #cf0505;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #3e8ef7;
+    max-width: 7000px;
+    width: 100px;
+  }
+  
+  .card h2 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: #3f51b5;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  /* Select Wrapper */
+.select-wrapper {
+    position: relative;
+    width: 100%;
+    display: inline-block;
+    font-size: 16px;
+    background-color: #ffffff;
+    border: 1px solid #d0d7e2; /* Light border for select box */
+    border-radius: 10px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition on hover/focus */
+  }
+  
+  /* Select Trigger (Dropdown Button) */
+  .select-trigger {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #f7f9fc; /* Light background for trigger */
+    border: 1px solid #d0d7e2; /* Border for dropdown button */
+    border-radius: 10px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Select Trigger Hover Effect */
+  .select-trigger:hover {
+    border-color: #6c63ff; /* Change border color on hover */
+    box-shadow: 0 0 4px rgba(108, 99, 255, 0.2); /* Subtle glow on hover */
+  }
+  
+  /* Select Trigger Focus Effect */
+  .select-trigger:focus {
+    border-color: #6c63ff; /* Focused border color */
+    box-shadow: 0 0 4px rgba(108, 99, 255, 0.3); /* Focused glow */
+    outline: none; /* Remove default focus outline */
+  }
+  
+  /* Dropdown Menu */
+  .select-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 4px; /* Space between select and dropdown */
+    padding: 8px 0;
+    display: none; /* Initially hide the dropdown */
+    z-index: 999; /* Ensure dropdown appears above other elements */
+  }
+  
+  /* Dropdown Items */
+  .select-item {
+    padding: 12px 16px;
+    font-size: 16px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+  }
+  
+  /* Select Item Hover Effect */
+  .select-item:hover {
+    background-color: #f4f6f9; /* Light hover background */
+  }
+  
+  /* Show the dropdown when the select is active */
+  .select-trigger:focus + .select-content,
+  .select-content:hover {
+    display: block; /* Display dropdown when trigger is focused or hovered */
+  }
+  
+  /* Select Value */
+  .select-value {
+    font-size: 16px;
+    color: #333;
+    padding: 8px 16px;
+  }
+  
+  /* Add custom styles for the select box if needed */
+  .select-wrapper .rs__control--is-focused {
+    border-color: #6c63ff;
+    box-shadow: 0 0 4px rgba(108, 99, 255, 0.3);
+  }
+  
+  /* Basic Select Styling */
+select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    font-family: inherit;
+    color: #333;
+    background-color: #f7f9fc;
+    border: 1px solid #d0d7e2;
+    border-radius: 10px;
+    appearance: none; /* Remove default browser arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='14' height='10' viewBox='0 0 14 10' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 3l6 6 6-6' stroke='%23666' stroke-width='2' fill='none' fill-rule='evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  select:hover {
+    background-color: #f1f3f8;
+    border-color: #6c63ff;
+    box-shadow: 0 0 6px rgba(108, 99, 255, 0.2);
+  }
+  
+  /* Focus Effect */
+  select:focus {
+    outline: none;
+    border-color: #6c63ff;
+    box-shadow: 0 0 6px rgba(108, 99, 255, 0.3);
+  }
+  
+  /* Disabled State */
+  select:disabled {
+    background-color: #e9ecef;
+    color: #999;
+    cursor: not-allowed;
+    border-color: #ccc;
+  }
+  
