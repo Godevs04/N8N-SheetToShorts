@@ -1,141 +1,201 @@
-/* Global Reset */
-* {
-  box-sizing: border-box;
+/* Global Body Styling */
+body {
   margin: 0;
-  padding: 0;
-  text-align: center;
-  justify-content: center;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #eaf0fc);
+  color: #333;
 }
 
-body {
-  text-align: center;
-  justify-content: center;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient Background */
-  color: #fff;
+/* Center content */
+.page-wrapper {
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  text-align: center;
-  padding: 20px;
+  padding: 40px 20px;
 }
 
-/* Heading */
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  font-weight: 600;
-  color: #fff;
-}
-
-/* Card Design */
+/* Card Styling with Background Color */
 .card {
-  background: rgba(255, 255, 255, 0.1); /* Glassmorphism Effect */
-  border-radius: 15px;
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 40px;
+  background-color: #ffffff;
+  background: linear-gradient(135deg, #ffffff, #4c93f1); /* Soft gradient */
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e7f0;
+  max-width: 480px;
   width: 100%;
-  max-width: 600px;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* Form Layout */
-form {
+.card:hover {
+  transform: scale(1.02); /* Slightly grow the card on hover */
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Heading */
+.card h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #3f51b5;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Form Styling */
+.my-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
-.input, .select-trigger {
-  background-color: #fff;
-  border: 2px solid #fff;
-  border-radius: 10px;
-  padding: 14px 16px;
-  margin: 10px 0;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-/* Input Focus */
-.input:focus, .select-trigger:focus {
-  outline: none;
-  border-color: #feb47b;
-  box-shadow: 0 0 10px rgba(255, 182, 123, 0.5);
-}
-
-.input::placeholder, .select-trigger::placeholder {
-  color: #b4b4b4;
-}
-
-/* Label Styling */
-.select-wrapper label {
-  font-size: 1rem;
-  color: #fff;
-  margin-bottom: 8px;
-  text-align: left;
-}
-
-/* Select Box Styling */
-.select-trigger {
-  cursor: pointer;
-  background-color: #fff;
-  font-size: 1rem;
+/* Input Fields */
+.input {
   padding: 12px 16px;
+  font-size: 16px;
+  background-color: #fbfbfb;
+  border: 1px solid #d0d7e2;
   border-radius: 10px;
-  border: 2px solid #fff;
-  transition: background-color 0.3s ease;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 4px rgba(108, 99, 255, 0.3);
+}
+
+/* Select Dropdown */
+.select-wrapper {
+  font-size: 16px;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.select-trigger {
+  width: 100%;
+  padding: 12px;
+  background-color: #fbfbfb;
+  border: 1px solid #d0d7e2;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .select-trigger:hover {
-  background-color: #ff7e5f;
-  color: #fff;
-  border-color: #ff7e5f;
+  border-color: #6c63ff;
 }
 
-.select-wrapper .select-content {
-  border-radius: 10px;
+.select-wrapper .rs__control--is-focused {
+  border-color: #6c63ff;
+  box-shadow: 0 0 4px rgba(108, 99, 255, 0.3);
 }
 
-/* Button Styling */
+/* Submit Button */
 .button {
-  border: black 1px;
-  background: linear-gradient(to right, #ff7e5f, #f8ab70); /* Gradient Button */
-  color: #fff;
-  padding: 14px 30px;
+  padding: 12px;
+  background-color: #3f51b5;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
   border: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.4s ease, transform 0.3s ease;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .button:hover {
-  background-color: #feb47b;
-  transform: scale(1.05);
+  background-color: #2c387e;
 }
 
 .button:active {
-  background-color: #ff7e5f;
+  transform: scale(0.97);
 }
 
-/* Button (Disabled) */
-.button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
+/* Label Styling */
+label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 8px;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .card {
-    padding: 25px;
-  }
+/* Spacing for the form */
+.space-y-4 {
+  margin-bottom: 16px;
+}
 
-  .input, .select-trigger {
-    font-size: 1rem;
-  }
+/* Card Styling */
+.card {
+  background-color: #ffffff;
+  background: linear-gradient(135deg, #ffffff, #f4f6f9); /* Soft gradient background */
+  border-radius: 16px; /* Rounded corners */
+  padding: 32px; /* Space inside the card */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  border: 1px solid #e0e7f0; /* Light border */
+  max-width: 480px; /* Card max width */
+  width: 100%; /* Full width for responsiveness */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover transition */
+  margin: 20px auto; /* Center card with margin */
+}
 
-  .button {
-    font-size: 1rem;
-  }
+/* Card Hover Effect */
+.card:hover {
+  transform: scale(1.05); /* Slight grow effect on hover */
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.1); /* Larger shadow */
+}
+
+/* Card Heading */
+.card h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #3f51b5; /* Elegant blue color */
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Card Content */
+.card-content {
+  padding: 16px 0; /* Spacing inside the card */
+}
+
+/* Optional Card Footer (if you need a footer) */
+.card-footer {
+  padding-top: 16px;
+  text-align: center;
+  color: #777;
+}
+
+/* Card Border for Interactive Elements */
+.card .input,
+.card .select-trigger,
+.card .button {
+  width: 100%;
+  border: 1px solid #d0d7e2; /* Light border for interactive elements */
+  border-radius: 10px;
+}
+
+.card .input:focus,
+.card .select-trigger:focus {
+  border-color: #6c63ff; /* Focus border color */
+  box-shadow: 0 0 4px rgba(108, 99, 255, 0.3); /* Focus glow */
+}
+
+/* Button */
+.card .button {
+  background-color: #3f51b5; /* Primary color for button */
+  color: white;
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Hover effect */
+  border: none;
+}
+
+.card .button:hover {
+  background-color: #2c387e; /* Darker shade on hover */
+}
+
+.card .button:active {
+  transform: scale(0.97); /* Button press effect */
 }

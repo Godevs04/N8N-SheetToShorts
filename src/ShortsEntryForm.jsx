@@ -76,11 +76,11 @@ export default function ShortsEntryForm() {
   
 
   return (
-    <div className="max-w-xl mx-auto mt-10">
+    <div className="max-w-xl mx-auto mt-10 divv page-wrapper">
       <Card className="card">
         <CardContent className="card-content">
           <h2>Submit Video Content Idea</h2>
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4 my-form">
           <label>Title</label>
             <Input
               className="input"
@@ -152,20 +152,20 @@ export default function ShortsEntryForm() {
               required
             />
 
-            <div className="select-wrapper">
+            <div className="">
               <label>Video Status</label>
               <Select value={formData.videoStatus} onValueChange={(value) => handleSelectChange("videoStatus", value)}>
                 <SelectTrigger className="select-trigger">
                   <SelectValue placeholder="Select video status" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="To Do">To Do</SelectItem>
-                  <SelectItem value="Created">Created</SelectItem>
+                  <SelectItem class="select-wrapper"value="To Do">To Do</SelectItem>
+                  <SelectItem class="select-wrapper"value="Created">Created</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
-            <div className="select-wrapper">
+            <div className="">
               <label>Publish Status</label>
               <Select class="select-wrapper" value={formData.publishStatus} onValueChange={(value) => handleSelectChange("publishStatus", value)}>
                 <SelectTrigger className="select-trigger">
