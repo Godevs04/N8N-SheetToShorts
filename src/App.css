@@ -132,8 +132,8 @@ label {
   padding: 32px; /* Space inside the card */
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
   border: 1px solid #e0e7f0; /* Light border */
-  max-width: 480px; /* Card max width */
-  width: 100%; /* Full width for responsiveness */
+  max-width: 700px; /* Card max width */
+  width: 100px; /* Full width for responsiveness */
   transition: transform 0.3s, box-shadow 0.3s; /* Smooth hover transition */
   margin: 20px auto; /* Center card with margin */
 }
@@ -169,7 +169,7 @@ label {
 .card .input,
 .card .select-trigger,
 .card .button {
-  width: 100%;
+  width: 150%;
   border: 1px solid #d0d7e2; /* Light border for interactive elements */
   border-radius: 10px;
 }

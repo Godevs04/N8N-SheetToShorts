@@ -152,26 +152,26 @@ export default function ShortsEntryForm() {
               required
             />
 
-            <div className="">
+            <div className="sss">
               <label>Video Status</label>
               <Select value={formData.videoStatus} onValueChange={(value) => handleSelectChange("videoStatus", value)}>
                 <SelectTrigger className="select-trigger">
                   <SelectValue placeholder="Select video status" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="select">
                   <SelectItem class="select-wrapper"value="To Do">To Do</SelectItem>
                   <SelectItem class="select-wrapper"value="Created">Created</SelectItem>
                 </SelectContent>
               </Select>
             </div>
 
-            <div className="">
+            <div className="sss">
               <label>Publish Status</label>
               <Select class="select-wrapper" value={formData.publishStatus} onValueChange={(value) => handleSelectChange("publishStatus", value)}>
                 <SelectTrigger className="select-trigger">
                   <SelectValue placeholder="Select publish status" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="select">
                   <SelectItem value="Not Processed">Not Processed</SelectItem>
                   <SelectItem value="Processed">Processed</SelectItem>
                 </SelectContent>
