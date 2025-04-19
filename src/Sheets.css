@@ -21,7 +21,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 18px;
-    padding: 28px;
+    margin:100px;
+    padding: 58px;
     background-color: #ffffff;
     border-radius: 14px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);

@@ -79,7 +79,7 @@ export default function ShortsEntryForm() {
     <div className="max-w-xl mx-auto mt-10 divv page-wrapper">
       <Card className="card">
         <CardContent className="card-content">
-          <h2>Submit Video Content Idea</h2>
+        <center><h2>Submit Video Content Idea</h2> </center>
           <form onSubmit={handleSubmit} className="space-y-4 my-form">
           <label>Title</label>
             <Input
@@ -182,6 +182,7 @@ export default function ShortsEntryForm() {
               Submit
             </Button>
           </form>
+         
         </CardContent>
       </Card>
     </div>
