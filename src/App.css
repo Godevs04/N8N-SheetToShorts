@@ -3,9 +3,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-align: center;
+  justify-content: center;
 }
 
 body {
+  text-align: center;
+  justify-content: center;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient Background */
   color: #fff;
@@ -95,7 +99,8 @@ form {
 
 /* Button Styling */
 .button {
-  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient Button */
+  border: black 1px;
+  background: linear-gradient(to right, #ff7e5f, #f8ab70); /* Gradient Button */
   color: #fff;
   padding: 14px 30px;
   border: none;

@@ -3,7 +3,7 @@ import { Input } from "./components/ui/input";  // Update the path
 import { Button } from "./components/ui/button";  // Update the path
 import { Card, CardContent } from "./components/ui/card";  // Update the path
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "./components/ui/select";  // Update the path
-// import './App.css';
+import './Sheets.css';
 export default function ShortsEntryForm() {
   const [formData, setFormData] = useState({
     title: "",
@@ -167,7 +167,7 @@ export default function ShortsEntryForm() {
 
             <div className="select-wrapper">
               <label>Publish Status</label>
-              <Select value={formData.publishStatus} onValueChange={(value) => handleSelectChange("publishStatus", value)}>
+              <Select class="select-wrapper" value={formData.publishStatus} onValueChange={(value) => handleSelectChange("publishStatus", value)}>
                 <SelectTrigger className="select-trigger">
                   <SelectValue placeholder="Select publish status" />
                 </SelectTrigger>
